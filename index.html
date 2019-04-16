@@ -35,18 +35,33 @@
       animation: opacify 10s infinite;
     }
 
-    .invite {
-      color: grey;
-      height: 100%;
-      font-size: 40px;
-      font-family: monospace;
-      position: fixed;
-      left: calc(50% - 332px);
+    .text {
       visibility: hidden;
+    }
+
+    .text > p {
+      position: fixed;
+      color: grey;
+      font-family: monospace;
+      padding: 0;
+      margin: 0;
+    }
+
+    .invite {
+      font-size: 40px;
+      left: calc(50% - 332px);
       top: 30px;
     }
 
-    body:hover .invite {
+    .hbd {
+      bottom: 5px;
+      right: 5px;
+      font-size: 14px;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+
+    body:hover .text {
       visibility: visible;
     }
 
@@ -78,6 +93,7 @@
     </div>
     <div class="text">
       <p class="invite"> jamila woods | brooklyn 5/31</p>
+      <p class="hbd">happy birthday emily</p>
     </div>
   </div>
 </body>
