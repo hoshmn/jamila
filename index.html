@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>lost in the woods</title>
+  <style type="text/css">
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+
+    body, .mask, .outer-mask, .jamila, .jamila-inverted {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .jamila {
+      background: url(JW.jpg) no-repeat center #d4d4d4;
+    }
+
+    .jamila-inverted {
+      background: url(JWI.jpg) no-repeat center #292929;
+      animation: opacify 5s infinite;
+    }
+
+    .mask {
+      opacity: inherit;
+      animation: blackwhite 5s infinite;
+    }
+
+    .outer-mask {
+      animation: opacify 10s infinite;
+    }
+
+    .invite {
+      color: grey;
+      height: 100%;
+      font-size: 40px;
+      font-family: monospace;
+      position: fixed;
+      left: calc(50% - 332px);
+      visibility: hidden;
+      top: 30px;
+    }
+
+    body:hover .invite {
+      visibility: visible;
+    }
+
+    @keyframes opacify {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes blackwhite {
+      0% { background-color: white; }
+      50% { background-color: black; }
+      100% { background-color: white; }
+    }
+
+  </style>
+  <script type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jamila">
+      <div class="jamila-inverted">
+        <div class="outer-mask">
+          <div class="mask"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <p class="invite"> jamila woods | brooklyn 5/31</p>
+    </div>
+  </div>
+</body>
+
+</html>
